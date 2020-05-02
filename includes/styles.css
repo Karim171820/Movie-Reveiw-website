@@ -1,0 +1,1125 @@
+
+body {
+  background-color:whitesmoke;
+   font-family: sans-serif;
+    color:#333;
+}
+
+/* TOPNAV */
+.Content{
+    height: 90px;
+    width:100%;
+    /* margin-left: 1%;
+    margin-right: 1%; */
+    /* margin-top: 1.5%; */
+    background-color: #de7119;
+   
+}
+.Content .LeftNav{
+  height: 100%;
+    width: 13%;
+    float: left;
+}
+.Content .LeftNav #logo{
+    height: 100%;
+    width: 160%;
+    margin-left: 3%;
+}
+
+.Content .MiddleNav {
+  width: 60%;
+  margin-left: 30% ;
+}
+
+.Content  .MiddleNav ul{  
+    margin-top: 3%;
+    float: left;
+    text-align: center;
+    list-style-type: none;
+    
+}
+.Content .MiddleNav ul li{
+    
+    font-size: 150%;
+    display: inline;
+}
+.Content .MiddleNav ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+.Content .MiddleNav ul li a:hover{
+    color: #323232;
+    
+}
+
+.RightNav input {
+    font-size: 130%;
+    width: 22%;
+    margin-top: 1.5%;
+    margin-right: 1%;
+    float: right;
+    color:#333;
+    border-radius:5px;
+} 
+
+
+/* DropDown */
+
+.dropdown {
+  float: none;
+  /* overflow: hidden; */
+  display: inline;
+}
+
+.dropdown #dropbtn{
+  font-size: 150%;
+  border: none;
+  outline: none;
+  color: whitesmoke;
+  padding: 14px;
+  /* background-color: inherit; */
+  /* margin: 0; */
+}
+
+.navbar a:hover, .dropdown:hover #dropbtn {
+  color: #323232;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #313336;
+  min-width: 147px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+  z-index: 1;
+  margin-left: 14.5%;
+  border: 2px solid ;
+  border-radius: 8px;
+}
+
+.dropdown-content a {
+  font-size: 20px;
+  float: none;
+  color:whitesmoke;
+  padding: 12px;
+  text-decoration: none;
+  display: block;
+  text-align: left; 
+}
+
+.dropdown-content a:hover {
+  /* background-color: rgba(236, 252, 205, 0.7); */
+  color: #de7119;
+}
+
+/* End-OF-DropDown */
+
+/* END-OF-TOPNAV */
+
+
+/* Set height to 100% for body and html to enable the background image to cover the whole page: */
+body, html {
+  height: 100%
+}
+
+.bgimg {
+  margin-top: 1%;
+  /* Full-screen */
+  height: 50%;
+  /* Center the background image */
+  background-position: center;
+  /* Scale and zoom in the image */
+  background-size: cover;
+  /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+  position: relative;
+  /* Add a white text color to all elements inside the .bgimg container */
+  color: white;
+  /* Add a font */
+  font-family: "Courier New", Courier, monospace;
+  /* Set the font-size to 25 pixels */
+  font-size: 25px;
+}
+
+/* Position text in the top-left corner */
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+
+/* Position text in the bottom-left corner */
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+/* Position text in the middle */
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 50px;
+}
+
+/* Style the <hr> element */
+
+
+/* Title */
+#title{
+  height: 10%;
+  margin-bottom: 1%;
+  width: 37%;
+  margin: 2% auto;
+}
+
+#title h1{
+font-size: 40px;
+color: #ffac41;
+border: 5px solid #ffac41;
+text-align: center;
+}
+
+/* End-Title */
+
+/* Slider */
+
+
+#wrapper {
+  border: 5px solid black;
+  background-color: #313336;
+  opacity: 90%;
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+#content, #content2 ,#content3,#content4 {
+
+  display: grid;
+  grid-gap: 16px;
+  grid-auto-flow: column;
+  margin: auto;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+#carousel1,#carousel2,#carousel3,#carousel4 {
+  height: 100%;
+  overflow: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  
+}
+
+.item {
+  width: 180px;
+  height: 180px;
+  background: green;
+  transition: width 1s,height 1s;
+}
+.item:hover{
+ height: 200px;
+ width: 200px;
+}
+
+#carousel1::-webkit-scrollbar,
+#carousel2::-webkit-scrollbar,
+#carousel3::-webkit-scrollbar,
+#carousel4::-webkit-scrollbar
+{
+  height: 0;
+}
+
+#prev1,#prev2,#prev3,#prev4,
+#next1,#next2,#next3,#next4 {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background: white;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  outline: 0;
+  cursor: pointer;
+  position: absolute;
+}
+
+#prev1,#prev2,#prev3,#prev4 {
+  top: 50%;
+  left: 0;
+  transform: translate(50%, -50%);
+  display: none;
+}
+
+#next1,#next2,#next3,#next4 {
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+/* end of slider */
+
+
+/* Vedio Section */
+
+#Vedio-Section{
+  width: 100%;
+}
+#Vedio-Player iframe{
+  width: 100%;
+  height: 100%;
+}
+/* End-vedio-Section */
+
+
+/* footer */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+* {
+  font-family: Open Sans;
+}
+
+
+.footer-distributed{
+    margin-top: 2%;
+	background: #323232;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 25px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* The company logo */
+
+#Footer-Logo{
+  width: 35%;
+}
+
+/* .footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Open Sans', cursive;
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  lightseagreen;
+} */
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+  font-weight:400;
+	text-decoration: none;
+	color:  inherit;
+}
+.footer-distributed .footer-links :hover{
+color: orange;
+}
+
+.footer-distributed .footer-company-name{
+	color: orange;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+  font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #ffac41;
+	text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #ffac41;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+/* movies/seires page css->>>abdelrahman amer 167565 */
+
+MOVIES.body{
+    margin: 0;
+    font-family: 'Fira Sans', sans-serif;
+}
+.film{
+    background-color:rgba(236, 252, 205, 0.2);
+    border-bottom: #ffac41 solid 2px;
+    padding: 1%;
+    position: relative;
+    height: 27%;
+    margin-left: 12%;
+    width: 80%;
+    margin-bottom: 1%;
+}
+
+.film-img{
+    display: inline-block;
+    width: 35%;
+    position: absolute;
+    margin-left: px;
+    top: 0;
+    float: left;
+}
+
+.first-film
+{
+    background-color: black;
+    padding: 10px;
+    border: 1px solid ;
+    width: 300px;
+    
+}
+.text
+{
+    float:left;
+    margin-left: 200px;
+    width:500px
+        
+}
+.film-title
+{
+    font-size: 24;
+    font-family: monospace;
+    margin: 5px;
+}
+
+/*movie page css*/
+moviePage.body{
+    margin: 0;
+    font-family: 'Fira Sans', sans-serif;
+}
+.filmpage{
+    background-color:rgba(236, 252, 205, 0.2);
+    box-shadow: 1px 4px 20px rgba(0, 0, 0, 0.5);
+    border: #ffac41 solid 3px;
+    border-radius: 3px;
+    padding: 1%;
+    position: relative;
+    height: 75%;
+    margin-left: 12%;
+    margin-right: 12%;
+    width: 80%;
+    margin-top: 5%;
+   
+}
+
+
+.icons{
+    margin-left: 20%;
+ 
+    margin-top: 6%;
+    width:5%;
+    
+
+}
+.pagenumberBar
+{
+  display: inline-block;
+  position: inherit;
+  margin-left: 50%;
+  background-color: #33383b;
+}
+.pagenumberBar a
+{
+  color: #ffffff;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+ 
+}
+.pagenumberBar a:hover{
+    color: #ffac41;
+}
+
+
+/*rating code*/
+.rating-area{
+    background-color:rgba(236, 252, 205, 0.9);
+    max-width: 300px;
+    height: 95px;
+    margin-left: auto;
+    margin-bottom: auto;
+    
+}
+
+
+.rating-area .ratings .fa
+{
+    font-size:20px;
+}
+
+
+
+.rating-area ul {
+  list-style-type:none;
+  padding:0;
+   
+}
+.ratings ul > li.star {
+  display:inline-block;
+}
+
+/* Idle State of the stars */
+.ratings ul > li.star > i.fa {
+  font-size:2em; /* Change the size of the stars */
+  color:burlywood; /* Color on idle state */
+}
+
+/* Hover state of the stars */
+.ratings ul > li.star.hover > i.fa {
+  color:#FFCC36;
+}
+
+/* Selected state of the stars */
+.ratings ul > li.star.selected > i.fa {
+  color:#FF912C;
+}
+
+.success-box {
+  margin:50px 0;
+  padding:10px 10px;
+  border:1px solid #eee;
+  background-color:rgba(236, 252, 205, 0.9);
+}
+.success-box > div {
+  vertical-align:top;
+  display:inline-block;
+  color:#888;
+}
+
+
+
+
+/*comments*/
+.commentSection
+{
+display: flex;
+flex-direction: column;
+padding: 10px 15px;
+margin: 12em auto;
+align-items: flex-start;
+border-bottom: 2px dashed orange;
+max-height: 23em;
+
+
+
+}
+.commentSection p
+{
+text-align: left;
+
+}
+
+#commentForm{
+    padding: 10px 15px;
+}
+#comments{
+    min-width: 87vh;
+}
+/*scroll bar*/
+::-webkit-scrollbar {
+  width: 15px;
+  background-color: #333;
+}
+
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+
+::-webkit-scrollbar-thumb {
+  background: orange; 
+  border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: orange; 
+}
+/*scroll bar end*/
+
+/*Muhammed177441*/
+
+/*login page*/
+
+
+
+#loginContainer{
+
+    background-color: #ffffff;
+    margin: 5em auto auto auto ;
+    width:300px;
+    height: 350px;
+    border: 3px solid #ffac41;
+    border-radius: 2%;
+    box-shadow: 1px 4px 20px rgba(0, 0, 0, 0.5);
+    align-items: center;
+   
+}
+
+#loginForm{
+    padding: 20px 30px;
+    display: grid;
+}
+
+/*sign up*/
+
+
+#signUpForm{
+  padding: 15px 20px;
+  display: grid;
+
+}
+
+
+#signUpSplit{
+  display: flex;
+ 
+  
+}
+
+#left{
+  width: 400px;
+  height: 460px;  
+  min-height:450px;
+  background-color: #ffac41;
+  border: 5px solid #323232;
+  border-radius: 5px;
+  margin: 2em 0 auto auto;
+  box-shadow: -8px 2px 10px rgba(0, 0, 0, 0.5);
+
+}
+#right{ 
+ background-color: #ffffff;
+ width: 400px;
+ height: 460px;    
+ align-items: center;
+ justify-content: center;
+ margin:2em auto auto 0;
+ border: 5px solid #ffac41;
+ border-radius: 5px;
+ box-shadow: 8px 2px 10px rgba(0, 0, 0, 0.5);
+ overflow: auto;
+    
+}
+
+
+
+/*sign up end*/
+
+
+/*profile page*/
+#profileContainer{
+ background-color: #ffffff;
+ height: 320px;
+ width: 400px;
+ align-items: center;
+ margin:2em auto auto auto;
+ border: 3px solid orange;
+ border-radius: 5px;
+ box-shadow: 8px 2px 10px rgba(0, 0, 0, 0.5);
+ overflow: auto;
+    
+}
+
+#profileForm{
+    
+padding: 15px 20px;
+display: grid;
+}
+
+
+
+/*profile end*/
+
+
+/*common between forms*/
+
+
+
+form button{
+  
+  border-radius: 5px; 
+  border: 2px solid orange; 
+  cursor: pointer;
+  color: orange;
+  display:block;
+  font-size: 14px;
+  padding: 6px;
+  width: 30%;
+  background-color:#333;
+  margin:auto;
+  font-family: sans-serif;
+}
+
+form label{
+  font-size: 17px;
+  color: #333;
+  margin: auto auto auto 0;
+  padding: 4px;
+  font-family: sans-serif; 
+}
+
+
+form input{
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  border-radius: 4px;
+  padding: 5px;
+  font-size: 12px;
+  color: #333;
+  width: 50%;
+  margin: auto;
+  font-family: sans-serif;
+}
+
+
+form p{
+  text-align: center;
+  font-family: sans-serif;
+  color: #333;
+}
+
+form h2{
+  text-align: center;
+  color: orange; 
+  margin: auto;
+  padding 10px;    
+  font-size: 2em;
+  font-family:sans-serif;
+}
+
+.FormSplit{
+   display: flex;
+   flex-direction: column;
+}
+.FormSplitSuccsses{
+   display: flex;
+   flex-direction: column;
+}
+
+.FormSplitError{
+   display: flex;
+   flex-direction: column;
+}
+
+
+.FormSplit small{
+  visibility: hidden;
+  text-align: center;
+  margin: 3px auto auto auto;
+}
+
+.FormSplitError small{
+  visibility: visible;
+  color:red;
+   margin:5px auto auto auto;
+}
+
+
+.FormSplitError input{
+  border: 2px solid red;
+    
+}
+
+.FormSplitSuccsses input{
+  border: 2px solid greenyellow;
+}
+
+.FormSplitSuccsses small{
+  visibility: hidden;
+}
+
+form a{
+    color:orange;
+    text-decoration:none;
+    font-family: sans-serif;
+}
+
+form a:hover{
+    opacity: 0.9;
+    text-decoration: underline;
+}
+
+form button:hover{
+   opacity:0.8;
+}
+
+form button:active{
+   opacity:1;
+}
+
+form textarea{
+    resize: none;
+    font-family: sans-serif;
+    border: 2px outset  grey;
+}
+
+
+/*common between forms  */
+
+
+
+
+
+/*about us*/
+
+#aboutUsContainer{
+ background-color: #ffffff;
+ height: 250px;
+ width: 400px;
+ padding: 10px 15px;    
+ align-items: center;
+ margin: 3em auto auto auto;
+ border: 3px solid orange;
+ border-radius: 5px;
+ box-shadow: 5px 2px 10px rgba(0, 0, 0, 0.5);
+ 
+    
+}
+
+#aboutUsContainer h2 {
+  text-align: center;
+  color: orange; 
+  margin: auto;
+  padding: 10px;
+  font-size: 2em;
+  font-family:sans-serif;
+  border-bottom: 3px dotted orange;
+}
+#aboutUsContainer p{
+  text-align: center;
+  font-size:1.1em;
+  font-family: sans-serif;
+  color: #333;
+}
+
+#aboutusContanerShown{
+ background-color: #ffffff;
+ height: 430px;
+ width: 400px;
+ padding: 10px 15px;    
+ align-items: center;
+ margin: 3em auto auto auto;
+ border: 3px solid orange;
+ border-radius: 5px;
+ box-shadow: 5px 2px 10px rgba(0, 0, 0, 0.5);
+  
+}
+
+
+#aboutusContanerShown h2 {
+  text-align: center;
+  color: orange; 
+  margin: auto;
+  padding: 10px;
+  font-size: 2em;
+  font-family:sans-serif;
+  border-bottom: 3px dotted orange;
+}
+#aboutusContanerShown p{
+  text-align: center;
+  font-size:1.1em;
+  font-family: sans-serif;
+  color: #333;
+}
+
+#hidden{
+    display: none;
+    overflow: auto;
+   
+    
+}
+#showBtn{
+    margin:auto;
+    background-color: white;;
+    color:orange;
+    border:none;
+    width:20%;
+}
+
+/*about us end*/
+
+
+
+/*admin page*/
+#adminSplit{
+    display: flex;
+    margin: 0 20vw;
+}
+
+
+#leftForm{
+  width: 400px;
+  height: 460px;  
+  min-height:450px;
+  background-color: #FFF;
+  border: 5px solid #ffac41;
+  border-radius: 5px;
+  margin: 2em 0 auto 0;
+  box-shadow: -8px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+#middleForm{
+  width: 400px;
+  height: 460px;  
+  min-height:450px;
+  background-color: #ffac41;
+  border: 5px solid #323232;
+  border-radius: 5px;
+  margin: 2em 0 auto 0;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    
+}
+#rightForm{ 
+ background-color: #ffffff;
+ width: 400px;
+ height: 460px;
+ min-width: 400px;    
+ align-items: center;
+ justify-content: center;
+ margin:2em auto auto 0;
+ border: 5px solid #ffac41;
+ border-radius: 5px;
+ box-shadow: 8px 2px 10px rgba(0, 0, 0, 0.5);
+ overflow: auto;
+    
+}
+
+
+
+#middleForm h2{
+color:#fff;
+    
+}
+#middleForm p{
+color:#fff;
+    
+}
+
+#middleForm label {
+color:#fff;
+    
+}
+
+#middleForm button {
+color:#fff;    
+border: 2px solid #fff;    
+}
+
+.radioArea{
+   display: inline-flex;
+  
+}
+.radioArea input[type="radio"]{
+ margin: 0px;
+  
+}
+
+#banUserForm{
+     padding: 15px 20px;
+  display: grid;
+
+}
+
+#editConentForm{
+    padding: 15px 20px;
+  display: grid;
+
+}
+
+#editConentForm{
+    padding: 15px 20px;
+  display: grid;
+
+}
+
+#removeContentForm{
+     padding: 15px 20px;
+  display: grid;
+    
+}
+
+
+/*admin page end*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
