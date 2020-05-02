@@ -18,7 +18,9 @@ if ($num > 0) {
         $post_item = array(
         
             "image"=> $image,
-            "id" => $id
+            "id" => $id,
+            "name" => $name,
+            "rate" => $rate
         );
         array_push($Movie_arr['data'], $post_item);
     }
