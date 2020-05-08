@@ -3,6 +3,7 @@ body {
   background-color:whitesmoke;
    font-family: sans-serif;
     color:#333;
+    z-index: 1;
 }
 
 /* TOPNAV */
@@ -725,7 +726,7 @@ text-align: left;
 
 #left{
   width: 400px;
-  height: 460px;  
+  height: 480px;  
   min-height:450px;
   background-color: #ffac41;
   border: 5px solid #323232;
@@ -737,14 +738,14 @@ text-align: left;
 #right{ 
  background-color: #ffffff;
  width: 400px;
- height: 460px;    
+ height: 480px;    
  align-items: center;
  justify-content: center;
  margin:2em auto auto 0;
  border: 5px solid #ffac41;
  border-radius: 5px;
  box-shadow: 8px 2px 10px rgba(0, 0, 0, 0.5);
- overflow: auto;
+
     
 }
 
@@ -756,14 +757,14 @@ text-align: left;
 /*profile page*/
 #profileContainer{
  background-color: #ffffff;
- height: 320px;
+ height: 340px;
  width: 400px;
  align-items: center;
  margin:2em auto auto auto;
  border: 3px solid orange;
  border-radius: 5px;
  box-shadow: 8px 2px 10px rgba(0, 0, 0, 0.5);
- overflow: auto;
+ 
     
 }
 
@@ -828,7 +829,7 @@ form h2{
   text-align: center;
   color: orange; 
   margin: auto;
-  padding 10px;    
+  padding: 10px;    
   font-size: 2em;
   font-family:sans-serif;
 }
@@ -995,30 +996,33 @@ form textarea{
 
 #leftForm{
   width: 400px;
-  height: 460px;  
+  height: 480px;  
   min-height:450px;
+  min-width: 400px;
   background-color: #FFF;
   border: 5px solid #ffac41;
   border-radius: 5px;
   margin: 2em 0 auto 0;
   box-shadow: -8px 2px 10px rgba(0, 0, 0, 0.5);
+  margin-left: -18%;
 }
 
 #middleForm{
   width: 400px;
-  height: 460px;  
+  height: 480px;  
   min-height:450px;
   background-color: #ffac41;
   border: 5px solid #323232;
   border-radius: 5px;
   margin: 2em 0 auto 0;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
-    
+  margin-left: 0.1%;
+  margin-right: 3%;
 }
 #rightForm{ 
  background-color: #ffffff;
  width: 400px;
- height: 460px;
+ height: 480px;
  min-width: 400px;    
  align-items: center;
  justify-content: center;
@@ -1026,7 +1030,7 @@ form textarea{
  border: 5px solid #ffac41;
  border-radius: 5px;
  box-shadow: 8px 2px 10px rgba(0, 0, 0, 0.5);
- overflow: auto;
+ margin-left: -3%;
     
 }
 
@@ -1089,37 +1093,32 @@ border: 2px solid #fff;
 
 
 
+/*
+home page box
+*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#UserInfo{
+  border:2px solid #ffac41;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);;
+  margin: 2% 0;
+  border-radius: 3%;
+  padding: 10px;
+  float: right;
+  width: 150px;
+  height: 60px;
+  z-index: 10;
+ 
+  }
+  
+  #UserInfo button{
+    margin-top: 5%;
+    width: 100%;
+  }
+  
+  #UserInfo label{
+    color: #333;
+    font-size: 16px;
+    width: 100%;
+  }
 
 

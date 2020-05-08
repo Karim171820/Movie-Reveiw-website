@@ -1,174 +1,129 @@
-<!DOCTYPE html>
-<html>
- <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-<title> Admin mode </title>
-<link rel="stylesheet" href="includes/styles.css">
-
-</head>
-    
-    
+  
+    <html>
+  <?php include '../includes/adminHeader.php';  ?>
+   
 <body >
-    
+  
     <div id="adminSplit">
      <div id="leftForm">
-            <form id="banUserForm">
+            <form method="post" id="banUserForm">
      <h2> Ban user</h2>
     
     
           <div class="FormSplit" >
-          <label for="username" >Username :</label>
-          <input type="text" id="username" placeholder=" Username" required>
+          <label for="ID"> ID :</label>
+          <input type="text" name="userID" id="UID" placeholder="User ID.." required>
            <small> error message</small>
           </div>
        
-         <label for="BanType">ban type :</label>
-     <div class="radioArea" >
-          
-          <input type="radio" id="ban" name="banType" value="ban" required >
-         <label for="ban">ban</label>
-         <input type="radio" id="suspend" name="banType" value="suspend" required >
-          <label for="suspend">suspend</label>
-            
-        </div>
-        
-        <div class="FormSplit" >
-          <label for="comment" >comment :</label>
-          <textarea  id="comment"   rows="6" cols="50" name="comment"  placeholder="type comment here.." ></textarea>
-            <small> error message</small>
-        </div>
-        
-    
-         <button> confirm </button>
-      
-    
+         <button name="banUser" type="submit"> confirm </button>
       </form>
         </div>
+
         <div id="middleForm">
-            <form id="editConentForm">
-                <h2> Edit content</h2>
+            <form method="post" id="editConentForm">
+                <h2> Edit Movie</h2>
                 <div class="FormSplit" >
-          <label for="ContentID" >ID :</label>
-          <input type="text" id="username" placeholder="Content ID" required>
+          <label for="MovID" >ID :</label>
+          <input type="text" name="MOVID" id="username" placeholder="Content ID" required>
            <small> error message</small>
                </div>
        
         
      <div class="FormSplit" >
-          <label for="email">title :</label>
-         <input type="text" id="contentTitle" placeholder="type new title"  required>
+          <label>title :</label>
+         <input type="text" name="Movetitle" id="contentTitle" placeholder="type new title"  required>
             <small> error message</small>
         </div>
         
         <div class="FormSplit" >
           <label for="description" >Description :</label>
-            <textarea  id="description"   rows="8" cols="50" name="description"  placeholder="type description here.." ></textarea>
+            <textarea  name="Movedesc" id="description"   rows="4" cols="50"   placeholder="type description here.." ></textarea>
             <small> error message</small>
                 </div>
-         <button> Update </button>
+
+
+                <div class="FormSplit" >
+          <label for="imgurl" >ImageUrl :</label>
+            <textarea  name="ImgUrl" id="imgurl"   rows="2" cols="30" name="description"  placeholder="type Image url here.." ></textarea>
+            <small> error message</small>
+                </div>
+
+
+         <button name="midbtn" type="submit"> Update </button>
       </form>
         </div>
         
-        
-        
-        
+         
         
         
     <div id="rightForm">
     
-    <form id="removeContentForm">
-     <h2> Remove content</h2>
+    <form method="post" id="removeContentForm">
+     <h2> Remove Movie</h2>
     
  <div class="FormSplit" >
-          <label for="ContentID" >ID :</label>
-          <input type="text" id="username" placeholder="Content ID" required>
+          <label for="MovieID" >ID :</label>
+          <input type="text" name="DelMovieID" id="deletemovie" placeholder="Content ID" required>
            <small> error message</small>
                </div>
-        
-        
-    
-         
-        
-    
-         <button> Remove </button>
-       
-    
+      
+         <button name="DelMovie" type="submit"> Remove </button>
+      
       </form>   
      </div>
     
     </div>
-    
     
     <!-- Links -->
       <script src=""></script>
     
     </body>
 
- <!-- start of footer -->
-
-
-  <footer class="footer-distributed">
-
-    <div class="footer-left">
-
-      <img src="Images/Logo/logo.png" alt="logo" id="Footer-Logo">
-
-      <!-- <h3>Company<span>logo</span></h3> -->
-
-      <p class="footer-links">
-        <a href="Home.html" class="link-1">Home</a>
-
-
-        <a href="login.html">log in</a>
-
-        <a href="About%20us.html">About us</a>
-
-        <a href="SignUp.html">Sign up</a>
-
-      </p>
-
-      <p class="footer-company-name">Company Name © 2015</p>
-    </div>
-
-    <div class="footer-center">
-
-      <div>
-        <i class="fa fa-map-marker"></i>
-        <p><span>444 S. Cedros Ave</span> Solana Beach, California</p>
-      </div>
-
-      <div>
-        <i class="fa fa-phone"></i>
-        <p>+1.555.555.5555</p>
-      </div>
-
-      <div>
-        <i class="fa fa-envelope"></i>
-        <p><a href="mailto:support@company.com">support@company.com</a></p>
-      </div>
-
-    </div>
-
-    <div class="footer-right">
-
-      <p class="footer-company-about">
-        <span>About the website</span>
-          we provide reviews for many movies , seris, anime and tv shows in English for all ages 
-          to make sure you have a perfect exprience.
-      </p>
-
-      <div class="footer-icons">
-
-        <a href=""><i class="fa fa-facebook"></i></a>
-        <a href="#"><i class="fa fa-twitter"></i></a>
-        <a href="#"><i class="fa fa-linkedin"></i></a>
-        <a href="#"><i class="fa fa-github"></i></a>
-
-      </div>
-
-    </div>
-
-  </footer>
-  <!-- end of footer -->
 </html>
+
+
+<?php
+if (isset($_POST['banUser'])) {
+    $mID = $_POST['userID'];
+    $result = mysqli_query($connection, "SELECT * FROM user where U_ID='$mID';");
+    if (mysqli_num_rows($result) > 0) {
+        $BanSQL = "DELETE FROM user WHERE U_ID = '$mID';";
+        mysqli_query($connection, $BanSQL);
+    }
+}
+?>
+
+<?php
+
+
+    if (isset($_POST['midbtn'])) {
+        $MOVid = $_POST['MOVID'];
+    $title = $_POST['Movetitle'];
+    $Description = $_POST['Movedesc'];
+    $img = $_POST['ImgUrl'];
+    $result = mysqli_query($connection, "SELECT * FROM movie where id = '$MOVid';");
+
+if (mysqli_num_rows($result) > 0){
+    $UpdateSql = "UPDATE movie SET name = '$title', description= '$Description', image= '$img' WHERE id = '$MOVid';" ;
+
+     mysqli_query($connection, $UpdateSql);
+    
+ }
+}
+?>
+
+
+
+<?php
+if (isset($_POST['DelMovie'])) {
+    $id = $_POST['DelMovieID'];
+    $result = mysqli_query($connection, "SELECT * FROM movie where id = '$id';");
+    if (mysqli_num_rows($result) > 0) {
+        $DelSQL = "DELETE FROM movie WHERE id = '$id';";
+        mysqli_query($connection, $DelSQL);
+    }
+}
+?>
+

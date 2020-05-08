@@ -5,7 +5,7 @@
     $dbhost = 'localhost';  
     $user = 'root';   
     $pass = '';    
-    $db = 'movie reviews';   
-    $connection = new mysqli($dbhost, $user, $pass, $db) or die("Unable to connect to database");
+    $database = 'ip';   
+    $connection = new mysqli($dbhost, $user, $pass, $database) or die("Unable to connect to database");
 
 ?>

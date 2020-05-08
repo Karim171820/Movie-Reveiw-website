@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html>
 
- <?php include './includes/header.php';   ?> 
+ <?php include './includes/header.php';  
+ 
+//  if(isset($_SESSION)['NAME']){
+//   echo'<p> you are logged in!</p>'; 
+// }else{
+// echo '<p> You are logged out!</p>';
+// }
+ 
+ ?> 
+
+
 
 
 <body>

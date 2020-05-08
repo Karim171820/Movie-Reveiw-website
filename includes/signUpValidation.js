@@ -34,7 +34,7 @@
         else if(min<obj.value.length<max){
             succsses(obj);
         }
-        
+    
     }
           
     
@@ -59,18 +59,20 @@
 S_password.addEventListener("input",function(event){
   
      checkLength(8,16,S_password);     
-    
+       
+   
 });  
 
   S_username.addEventListener("input",function(event){
    
     checkLength(8,16,S_username);
+     
    
             });
   
   
     signUpForm.addEventListener("submit", function(event){
-    event.preventDefault();    
+    //event.preventDefault();  
    
     checkPassword(S_password,S_password_2);
   
@@ -91,4 +93,3 @@ S_password.addEventListener("input",function(event){
 //  }
 //});
 //}
-

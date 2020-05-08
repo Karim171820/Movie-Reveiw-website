@@ -14,7 +14,7 @@ function login(username,password){
 
 loginForm.addEventListener("submit",function(event){
     
-    event.preventDefault();
+    //event.preventDefault();
     //remove checklength from here
     
    //login();    
@@ -26,9 +26,6 @@ loginForm.addEventListener("submit",function(event){
 //sign up validation
     
 
-
-   
-    var signUpForm =document.getElementById("signUpForm");
     var S_username = document.getElementById("username");
     var S_email    = document.getElementById("email");
     var S_password = document.getElementById("password");
@@ -72,19 +69,10 @@ loginForm.addEventListener("submit",function(event){
         }
         
     }
+ 
   
-  signUpForm.addEventListener("input",function(event){
-    event.preventDefault();
-    checkLength(8,16,S_username);
-    checkLength(8,16,S_password);     
-            });
-  
-  
-    signUpForm.addEventListener("submit", function(event){
-    event.preventDefault();    
    
-    checkPassword(S_password,S_password_2);
   
     
-});
+
 

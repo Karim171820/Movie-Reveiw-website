@@ -9,19 +9,7 @@
 <body>
 
     <div id="container">
-        <!-- <div class="film">
-            
-            <div class="rating">
-
-
-                <span style="color:gold" class="fa fa-star checked"></span>
-                <span style="color:gold" class="fa fa-star checked"></span>
-                <span style="color:gold" class="fa fa-star checked"></span>
-                <span style="color:gold" class="fa fa-star checked"></span>
-                <span style="color: gold" class="fa fa-star checked"></span>
-
-            </div> -->
-        <!-- </div> -->
+        
     </div>
     <!--    _______________________________________________________________________________-->
 
